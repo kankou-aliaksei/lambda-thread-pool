@@ -32,3 +32,4 @@ class LambdaThreadPool:
     @staticmethod
     def __handler_wrapper(conn, handler, *args):
         conn.send(handler(*args))
+        conn.close()
